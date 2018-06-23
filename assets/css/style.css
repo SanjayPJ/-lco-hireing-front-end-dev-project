@@ -1,0 +1,145 @@
+/* default styles */
+
+body {
+    font-family: 'Catamaran', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #202020;
+    min-width: 320px;
+}
+h1{
+    font-weight: 200;
+    font-size: 320%;
+}
+h6{
+    text-align: justify;
+    font-weight: 600;
+}
+
+.opacity-md{
+    opacity: 0.6;
+}
+.text-bold{
+    font-weight: 600;
+    font-size: 120%;
+}
+pre{
+    border-radius: 5px;
+}
+footer{
+    background: #084f96;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #27ae60 , #27ae60);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right , #27ae60 , #2980b9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+/* main container style starts here */
+
+/* hero container styles */
+
+
+.hero {
+    height: 30vh;
+    min-height: 220px;
+    background: #084f96;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #27ae60 , #27ae60);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right , #27ae60 , #2980b9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    position: relative;
+}
+.hero-text-container{
+    color: #fff;
+    position: absolute;
+    bottom: 30px;
+}
+.status-container{
+    background-color: #f1f1f1;
+    text-align: center;
+    font-size: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.status-container p{
+    margin-bottom: 0;
+}
+.main-container{
+    background-color: #f1f1f1;
+    margin: 10px 0;
+    border-radius: 3px;
+}
+.card-header , .card{
+    border: 0;
+}
+.link-header{
+    font-size: 120%;
+    color: #2980b9;
+}
+.sub-text{
+    padding-left: 15px;
+    font-size: 16px;
+    margin: 0;
+    text-align: justify;
+}
+.icons{
+    height: 45px;
+    width: 45px;
+    position: relative;
+}
+.icons i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.icons{
+    border-radius: 50%;
+}
+.facebook{
+    background-color: #084f96;
+    transition: all 0.5s;
+    color: #fff;
+}
+.twitter{
+    background-color: #598dca;
+    transition: all 0.5s;
+    color: #fff;
+}
+.instagram{
+    background-color: #fb3958;
+    transition: all 0.5s;
+    color: #fff;
+}
+.linkedin{
+    background-color:  #4875B4;
+    transition: all 0.5s;
+    color: #fff;
+}
+
+.facebook:hover{
+    background-color: #f1f1f1;
+    color: #084f96;
+    border : 2px solid #084f96;
+}
+.twitter:hover{
+    background-color: #f1f1f1;
+    color: #598dca;
+    border : 2px solid #598dca;
+}
+.instagram:hover{
+    background-color: #f1f1f1;
+    color: #fb3958;
+    border : 2px solid #fb3958;
+}
+.linkedin:hover{
+    background-color:  #f1f1f1;
+    color:  #4875B4;
+    border : 2px solid  #4875B4;
+}
+.dis_container{
+    padding: 0 20px;
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+/* main container style starts here */

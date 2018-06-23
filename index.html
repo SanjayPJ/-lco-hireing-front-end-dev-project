@@ -1,0 +1,634 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="description" content="C and Java Programming questions and answers with explanation for interview, competitive examination
+    and entrance test. Fully solved examples with detailed answer description, explanation are given
+    and it would be easy to understand.">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="Sanjay PJ">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:200,400,600" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <title>Programming Questions and Answers</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="hero">
+            <div class="hero-text-container w-100">
+                <div class="container">
+                    <h1 class="text-center hero-text">Programming Questions and Answers</h1>
+                    <h6 class="text-center opacity-md">Fully solved C and Java examples with detailed answer description, explanation.</h6>
+                </div>
+            </div>
+        </header>
+        <div class="status-container">
+            <p class="opacity-md">
+                <i class="fa fa-pencil pr-1"></i>
+                <b>Sanjay PJ</b>, 3 days ago
+            </p>
+        </div>
+        <div class="container-fluid">
+            <div class="row no-gutters">
+                <div class="col-md-9 main-container p-3">
+                    <div class="py-3 text-bold text-justify">Our Programming Questions and Answers prepares an individual for competitive exams, entrance exams, various
+                        tests and interviews. Questions have detailed problem descriptions and solutions with detailed explanations
+                        so that one can understand them easily.</div>
+                        <p>Our Examples :</p>
+                    <div class="accordion" id="accordion">
+
+
+
+                        <!-- palindrom card starts here -->
+
+
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link link-header text-bold text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                                        aria-controls="collapseOne">
+                                        <p>Palindrome or Not</p>
+                                    </button>
+                                    <p class="sub-text">This program reverses an integer (entered by the user) using while loop. Then, if statement
+                                        is used to check whether the reversed number is equal to the original number or not.</p>
+                                </h5>
+                            </div>
+
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                <div class="card-body pl-5">
+                                        <p>An integer is a palindrome if the reverse of that number is equal to the original number.
+                                            </p>
+                                    <h5 class="pt-1">Example: C Program to Check Palindrome </h5>
+
+
+                          
+
+                                    <pre><code class="language-c"><!-- code container starts here -->
+#include &lt;stdio.h&gt;
+int main(){
+    int n, reversedInteger = 0, remainder, originalInteger;
+
+    printf("Enter an integer: ");
+    scanf("%d", &amp;n);
+
+    originalInteger = n;
+
+    // reversed integer is stored in variable 
+    while( n!=0 )
+    {
+        remainder = n%10;
+        reversedInteger = reversedInteger*10 + remainder;
+        n /= 10;
+    }
+
+    // palindrome if orignalInteger and reversedInteger are equal
+    if (originalInteger == reversedInteger)
+        printf("%d is a palindrome.", originalInteger);
+    else
+        printf("%d is not a palindrome.", originalInteger);
+    
+    return 0;
+
+}
+<!-- code container ends here -->
+</code></pre>
+<p><b>Output</b></p>
+<pre><code class="language-xxx">
+Enter an integer: 1001
+1001 is a palindrome.
+
+</code></pre>
+                                        <h5 class="pt-4">Example: Java Program to Check Palindrome </h5>
+
+
+                                        </p>
+
+                                    <pre><code class="language-java"><!-- code container starts here -->
+public class Palindrome {
+
+    public static void main(String[] args) {
+
+        int num = 121, reversedInteger = 0, remainder, originalInteger;
+
+        originalInteger = num;
+
+        // reversed integer is stored in variable 
+        while( num != 0 )
+        {
+            remainder = num % 10;
+            reversedInteger = reversedInteger * 10 + remainder;
+            num  /= 10;
+        }
+
+        // palindrome if orignalInteger and reversedInteger are equal
+        if (originalInteger == reversedInteger)
+            System.out.println(originalInteger + " is a palindrome.");
+        else
+            System.out.println(originalInteger + " is not a palindrome.");
+    }
+}<!-- code container ends here -->
+                                        </code></pre>
+<p><b>Output</b></p>
+<pre><code class="language-xxx">
+Enter an integer: 1001
+1001 is a palindrome.
+
+</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- palindrom card ends here -->
+
+
+
+
+                        <!-- fibonacci card starts here -->
+
+
+
+                        <div class="card">
+                            <div class="card-header" id="headingTwo">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed link-header text-bold" type="button" data-toggle="collapse" data-target="#collapseTwo"
+                                        aria-expanded="false" aria-controls="collapseTwo">
+                                        Fibonacci Sequence
+                                    </button>
+                                    <p class="sub-text">Example on how to display the Fibonacci sequence of first n numbers (entered by the user)
+                                        using loop. Also in different example, you learn to generate the Fibonacci sequence
+                                        up to a certain number.</p>
+
+                                </h5>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                <div class="card-body pl-5">
+                                        <p>The Fibonacci sequence is a series where the next term is the sum of pervious two terms. The first two terms of the Fibonacci sequence is 0 followed by 1.
+                                            </p>
+<pre><code class="language-xxx">
+The Fibonacci sequence: 0, 1, 1, 2, 3, 5, 8, 13, 21
+
+</code></pre>
+                                            
+                                                <h5 class="pt-4">Example: C Program - Fibonacci Sequence Up to a Certain Number</h5>
+            
+            
+                                                   
+            
+                                                <pre><code class="language-c"><!-- code container starts here -->
+#include &lt;stdio.h&gt;
+int main()
+{
+    int t1 = 0, t2 = 1, nextTerm = 0, n;
+
+    printf("Enter a positive number: ");
+    scanf("%d", &amp;n);
+
+    // displays the first two terms which is always 0 and 1
+    printf("Fibonacci Series: %d, %d, ", t1, t2);
+
+    nextTerm = t1 + t2;
+
+    while(nextTerm &lt;= n)
+    {
+        printf("%d, ",nextTerm);
+        t1 = t2;
+        t2 = nextTerm;
+        nextTerm = t1 + t2;
+    }
+    
+    return 0;
+}<!-- code container ends here -->
+
+</code></pre>
+<p><b>Output</b></p>
+<pre><code class="language-xxx">
+Enter a positive integer: 100
+Fibonacci Series: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 
+
+</code></pre>
+                                                    <h5 class="pt-4">Example: Java Program - Fibonacci Sequence Up to a Certain Number</h5>
+            
+            
+                                                    </p>
+            
+                                                <pre><code class="language-java"><!-- code container starts here -->
+public class Fibonacci {
+
+    public static void main(String[] args) {
+
+        int n = 100, t1 = 0, t2 = 1;
+        
+        System.out.print("Upto " + n + ": ");
+        while (t1 &lt;= n)
+        {
+            System.out.print(t1 + " + ");
+
+            int sum = t1 + t2;
+            t1 = t2;
+            t2 = sum;
+        }
+    }
+}<!-- code container ends here -->
+
+</code></pre>
+            <p><b>Output</b></p>
+            <pre><code class="language-xxx">
+Upto 100: 0 + 1 + 1 + 2 + 3 + 5 + 8 + 13 + 21 + 34 + 55 + 89 +  
+            </code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- fibonacci card ends here -->
+
+
+
+                        <!-- factorial card starts here -->
+
+
+
+
+                        <div class="card">
+                            <div class="card-header" id="headingThree">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed link-header text-bold" type="button" data-toggle="collapse" data-target="#collapseThree"
+                                        aria-expanded="false" aria-controls="collapseThree">
+                                        Factorial of a Number
+                                    </button>
+                                    <p class="sub-text">The factorial of a positive integer n is equal to <code>1*2*3*...n.</code>> You will learn to calculate
+                                        the factorial of a number using for loop in this example.</p>
+
+                                </h5>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                <div class="card-body pl-5">
+                                        <p>The factorial of a positive number n is given by:
+                                            </p>
+<pre><code class="language-xxx">
+factorial of n (n!) = 1*2*3*4....n
+
+</code></pre>
+                                       <p>The factorial of a negative number doesn't exist. And, the factorial of 0 is 1, 0! = 1</p>     
+                                                <h5 class="pt-4">Example: C Program - Factorial of a Number</h5>
+            
+            
+                                                   
+            
+                                                <pre><code class="language-c"><!-- code container starts here -->
+#include &lt;stdio.h&gt;
+    int main()
+    {
+        int n, i;
+        unsigned long long factorial = 1;
+    
+        printf("Enter an integer: ");
+        scanf("%d",&amp;n);
+    
+        // show error if the user enters a negative integer
+        if (n &lt; 0)
+            printf("Error! Factorial of a negative number doesn't exist.");
+    
+        else
+        {
+            for(i=1; i&lt;=n; ++i)
+            {
+                factorial *= i;              // factorial = factorial*i;
+            }
+            printf("Factorial of %d = %llu", n, factorial);
+        }
+    
+        return 0;
+    }<!-- code container ends here -->
+
+</code></pre>
+<p><b>Output</b></p>
+<pre><code class="language-xxx">
+Enter an integer: 10
+Factorial of 10 = 3628800
+
+</code></pre>
+                                                    <h5 class="pt-4">Example: Java Program - Factorial of a Number</h5>
+            
+            
+                                                    </p>
+            
+                                                <pre><code class="language-java"><!-- code container starts here -->
+public class Factorial {
+
+    public static void main(String[] args) {
+
+        int num = 10;
+        long factorial = 1;
+        for(int i = 1; i &lt;= num; ++i)
+        {
+            // factorial = factorial * i;
+            factorial *= i;
+        }
+        System.out.printf("Factorial of %d = %d", num, factorial);
+    }
+}<!-- code container ends here -->
+
+</code></pre>
+<p><b>Output</b></p>
+<pre><code class="language-xxx">
+Factorial of 10 = 3628800
+
+</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- factorial card ends here -->
+
+
+
+                        <!-- bubble sort card starts here -->
+
+                        <div class="card">
+                            <div class="card-header" id="headingFour">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed link-header text-bold" type="button" data-toggle="collapse" data-target="#collapseFour"
+                                        aria-expanded="false" aria-controls="collapseFour">
+                                        Bubble Sort Algorithm
+                                    </button>
+                                    <p class="sub-text">Bubble sort algorithm starts by comparing the first two elements of an array and swapping if necessary, i.e., if you want to sort the elements of array in ascending order and if the first element is greater than second then, you need to swap the elements but, if the first element is smaller than second, you mustn't swap the element. Then, again second and third elements are compared and swapped if it is necessary and this process go on until last and second last element is compared and swapped. This completes the first step of bubble sort.</p>
+
+                                </h5>
+                            </div>
+                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                                <div class="card-body pl-5">
+                                        <p>If there are n elements to be sorted then, the process mentioned above should be repeated n-1 times to get required result. But, for better performance, in second step, last and second last elements are not compared becuase, the proper element is automatically placed at last after first step. Similarly, in third step, last and second last and second last and third last elements are not compared and so on.
+
+                                                
+                                            </p>
+                                            <p>A figure is worth a thousand words so, acknowledge this figure for better understanding of bubble sort.</p>
+<img src="assets/img/bubble.jpg" alt="" width="100%">                         
+                                                <h5 class="pt-4">Example: C Program To Sort Elements using Bubble Sort Algorithm</h5>
+            
+            
+                                                   
+            
+                                                <pre><code class="language-c"><!-- code container starts here -->
+/*C Program To Sort data in ascending order using bubble sort.*/
+#include &lt;stdio.h&gt;
+int main()
+{
+    int data[100],i,n,step,temp;
+    printf("Enter the number of elements to be sorted: ");
+    scanf("%d",&amp;n);
+    for(i=0;i&lt;n;++i)
+    {
+        printf("%d. Enter element: ",i+1);
+        scanf("%d",&amp;data[i]);
+    }
+
+    for(step=0;step&lt;n-1;++step)
+    for(i=0;i&lt;n-step-1;++i) 
+    {
+        if(data[i]&gt;data[i+1])   /* To sort in descending order, change > to &lt; in this line. */
+        {
+            temp=data[i];
+            data[i]=data[i+1];
+            data[i+1]=temp;
+        }
+    }
+    printf("In ascending order: ");
+    for(i=0;i&lt;n;++i)
+            printf("%d  ",data[i]);
+    return 0;
+}<!-- code container ends here -->
+
+</code></pre>
+<p><b>Output</b></p>
+<pre><code class="language-xxx">
+Enter the number of elements to be sorted: 6
+1. Enter element: 12
+2. Enter element: 3
+3. Enter element: 0
+4. Enter element: -3
+5. Enter element: 1
+6. Enter element: -9
+In ascending order: -9 -3 0 1 3 13
+
+</code></pre>
+                                                    <h5 class="pt-4">Example: Java Program To Sort Elements using Bubble Sort Algorithm</h5>
+            
+            
+                                                    </p>
+            
+                                                <pre><code class="language-java"><!-- code container starts here -->
+// Java program for implementation of Bubble Sort
+class BubbleSort
+{
+    void bubbleSort(int arr[])
+    {
+        int n = arr.length;
+        for (int i = 0; i &lt; n-1; i++)
+            for (int j = 0; j &lt; n-i-1; j++)
+                if (arr[j] &gt; arr[j+1])
+                {
+                    // swap temp and arr[i]
+                    int temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                }
+    }
+    
+    /* Prints the array */
+    void printArray(int arr[])
+    {
+        int n = arr.length;
+        for (int i=0; i&lt;n; ++i)
+            System.out.print(arr[i] + " ");
+        System.out.println();
+    }
+    
+    // Driver method to test above
+    public static void main(String args[])
+    {
+        BubbleSort ob = new BubbleSort();
+        int arr[] = {64, 34, 25, 12, 22, 11, 90};
+        ob.bubbleSort(arr);
+        System.out.println("Sorted array");
+        ob.printArray(arr);
+    }
+}<!-- code container ends here -->
+
+</code></pre>
+            <p><b>Output</b></p>
+            <pre><code class="language-xxx">
+Sorted array:
+11 12 22 25 34 64 90
+
+</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- bubble sort card ends here -->
+
+
+
+
+                        <div class="card">
+                            <div class="card-header" id="headingFive">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed link-header text-bold" type="button" data-toggle="collapse" data-target="#collapseFive"
+                                        aria-expanded="false" aria-controls="collapseFive">
+                                       3rd largest number in an array.
+                                    </button>
+                                    <p class="sub-text">We can find the third largest number in an array in java by sorting the array and returning the 3nd largest number.</p>
+                                </h5>
+                            </div>
+                            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                                <div class="card-body pl-5">
+                                        
+                                    <h5 class="pt-1">Example: C Program to find Third Largest Number in an Array </h5>
+
+
+                          
+
+                                    <pre><code class="language-c"><!-- code container starts here -->
+// C program to find third Largest element in an array
+// of distinct elements
+#include &lt;stdio.h&gt;
+ 
+void thirdLargest(int arr[], int arr_size)
+{
+    /* There should be atleast three elements */
+    if (arr_size &lt; 3)
+    {
+        printf(" Invalid Input ");
+        return;
+    }
+ 
+    // Find first largest element
+    int first = arr[0];
+    for (int i = 1; i &lt; arr_size ; i++)
+        if (arr[i] > first)
+            first = arr[i];
+ 
+    // Find second largest element
+    int second = INT_MIN;
+    for (int i = 0; i &lt; arr_size ; i++)
+        if (arr[i] > second &amp;&amp; arr[i] &lt; first)
+            second = arr[i];
+ 
+    // Find third largest element
+    int third = INT_MIN;
+    for (int i = 0; i &lt; arr_size ; i++)
+        if (arr[i] > third &amp;&amp; arr[i] &lt; second)
+            third = arr[i];
+ 
+    printf("The third Largest element is %d\n", third);
+}
+ 
+/* Driver program to test above function */
+int main()
+{
+    int arr[] = {12, 13, 1, 10, 34, 16};
+    int n = sizeof(arr)/sizeof(arr[0]);
+    thirdLargest(arr, n);
+    return 0;
+}<!-- code container ends here -->
+
+</code></pre>
+<p><b>Output</b></p>
+<pre><code class="language-xxx">
+The third Largest element is 13
+
+</code></pre>
+                                        <h5 class="pt-4">Example: Java Program to find Third Largest Number in an Array</h5>
+
+
+                                        </p>
+
+                                    <pre><code class="language-java"><!-- code container starts here -->
+public class ThirdLargestInArrayExample{  
+    public static int getThirdLargest(int[] a, int total){  
+    int temp;  
+    for (int i = 0; i &lt; total; i++)   
+            {  
+                for (int j = i + 1; j &lt; total; j++)   
+                {  
+                    if (a[i] > a[j])   
+                    {  
+                        temp = a[i];  
+                        a[i] = a[j];  
+                        a[j] = temp;  
+                    }  
+                }  
+            }  
+           return a[total-3];  
+    }  
+    public static void main(String args[]){  
+    int a[]={1,2,5,6,3,2};  
+    int b[]={44,66,99,77,33,22,55};  
+    System.out.println("Third Largest: "+getThirdLargest(a,6));  
+    System.out.println("Third Largest: "+getThirdLargest(b,7));  
+    }}<!-- code container ends here -->
+
+</code></pre>
+<p><b>Output</b></p>
+<pre><code class="language-xxx">
+Third Largest:3
+Third Largest:66
+
+</code></pre>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="main-container ml-2 px-3" style="padding: 32px 0 0 0">
+                        <div class="text-bold">Share this post</div>
+                        <ul class="list-inline py-3">
+                            <li class="list-inline-item icons facebook"><i class="	fa fa-facebook"></i></li>
+                            <li class="list-inline-item icons twitter"><i class="	fa fa-twitter"></i></li>
+                            <li class="list-inline-item icons instagram"><i class="	fa fa-instagram"></i></li>
+                            <li class="list-inline-item icons linkedin"><i class="	fa fa-linkedin"></i></li>
+                        </ul>
+                    </div>
+
+                </div>
+                
+            </div>
+            <div class="dis_container">
+                    <div id="disqus_thread"></div>
+            </div>
+
+        </div>
+        <footer class="pt-4 pb-5">
+            <div class="text-center text-white">Made with <span class="text-danger"><i class="fa fa-heart"></i></span> by Sanjay PJ</div>
+        </footer>
+    </div>
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="assets/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="assets/js/prism.js"></script>
+
+</body>
+
+</html>
